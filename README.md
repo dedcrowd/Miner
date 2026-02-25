@@ -19,7 +19,7 @@ go version
 2. Clone or download the repository, then build:
 
 ```bash
-go build -o miner deMinerPlus.go
+go build -o ~/go/bin/miner deMinerPlus.go
 ```
 
 ---
