@@ -1,3 +1,86 @@
+
+
+---
+
+# Miner – Ultra-fast API Key & Secret Scanner
+
+**Miner** is a Go-based tool for scanning files, stdin, or URLs to find API keys, secrets, tokens, and sensitive credentials using regex. It works with local files, piped input, or URLs from tools like `gau`, `waybackurls`, or `subfinder`. Fully parallelized for maximum speed.
+
+---
+
+## **Installation**
+
+1. Ensure Go is installed:
+
+```bash
+go version
+```
+
+2. Clone or download the repository, then build:
+
+```bash
+go build -o miner deMinerPlus.go
+```
+
+---
+
+## **Usage**
+
+### **Scan a file containing endpoints**
+
+```bash
+miner -f endpoints.txt
+```
+
+* Scans all URLs listed in `endpoints.txt`.
+* Outputs the URL followed by any matching secrets.
+
+### **Scan stdin (pipe from another tool)**
+
+```bash
+cat urls.txt | miner -
+```
+
+* Accepts input from any command (e.g., `gau`, `subfinder`, `waybackurls`).
+* Each line is treated as a URL and scanned.
+
+### **Scan individual URLs**
+
+```bash
+miner https://example.com/app.js https://test.com/main.js
+```
+
+* Can provide one or multiple URLs as arguments.
+
+---
+
+## **Output Format**
+
+```
+https://example.com/main/main.js
+    apikey=apikeyhere
+https://example.com/upload/index.html
+    jwt=eyj+here
+```
+
+* URL first, then each matched key or token indented underneath.
+
+---
+
+## **Features**
+
+* Fully parallelized for speed.
+* Supports files, stdin, and URLs.
+* Works with endpoint lists from popular reconnaissance tools.
+* Regex covers common API keys, tokens, AWS keys, GitHub/GitLab keys, Stripe, Firebase, and more.
+
+---
+
+If you want, I can also **write a ready-to-paste GitHub `README.md`** including badges, commit-ready markdown, and usage examples. That way you can just commit it directly. Do you want me to do that?
+
+
+
+
 # miner
 Fastes Hard Coded Credentials Founder
 deMiner - Ultra-Fast Secret & API Key Scanner
