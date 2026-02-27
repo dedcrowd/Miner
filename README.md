@@ -10,16 +10,9 @@
 
 ## **Installation**
 
-1. Ensure Go is installed:
-
+One Lineer INSTALLATION...
 ```bash
-go version
-```
-
-2. Clone or download the repository, then build:
-
-```bash
-go build -o ~/go/bin/miner deMinerPlus.go
+cd /opt; git clone https://github.com/dedcrowd/Miner.git | cd Miner ; go build -o ~/go/bin/miner prominer.go
 ```
 
 ---
